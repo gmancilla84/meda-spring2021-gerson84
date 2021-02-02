@@ -10,9 +10,10 @@
 
     <!-- Internal CSS -->
     <style>
-        p { 
-            color: blue; /* NOT text-color */
-            background-color:aquamarine;
+        p {
+            color: blue;
+            /* NOT text-color */
+            background-color: aquamarine;
             font-size: 24px;
             font-family: "Arial";
             font-weight: bold;
@@ -51,11 +52,11 @@
         }
 
         main article form input {
-            background-color: green;
+            /* background-color: green; */
         }
 
         #password {
-            background-color: blue;
+            /* background-color: blue; */
         }
 
         img {
@@ -65,6 +66,59 @@
             border-color: black;
             border-style: solid;
             border-radius: 10px;
+        }
+
+        #first-table {
+            border-width: 1px;
+            border-style: dashed;
+            border-color: red;
+            width: 400px;
+                /*  border-collapse: collapse; */
+            border-spacing: 10px;
+            background-color: lightgray;
+        }
+
+        #first-table tr {
+            /* border shorthand for border-width, border-style, and border-color */
+            border: 1px dotted blue;
+        }
+
+        #first-table tr td {
+            border: 1px solid green;
+            border-radius: 5px;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            background-color: white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #username {
+            background-color: white;
+            /* Order of values for margin/padding shorthand:
+            TOP RIGHT BOTTOM LEFT 
+            TOP/BOTTOM LEFT/RIGHT
+            ALL AROUND
+            */
+            margin: 20px;
+            padding: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            color: slategray;
+            border: slategrey 2px solid;
+            border-radius: 8px;
+        }
+
+
+        #submitbutton {
+            width: 52px;
+            height: 52px;
+            padding: 0;
+            border-radius: 50%;
+            border-color: tomato;
+            border-style: solid;
+            color: white;
         }
     </style>
 
@@ -79,8 +133,12 @@
     <main>
         <article>
             <h1>This is a summary of HTML5.</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum distinctio nihil adipisci quos, aliquid assumenda voluptatem, reiciendis architecto autem magnam, sint modi repudiandae pariatur. Suscipit at ducimus quas error voluptatem.</p>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic minus neque tenetur! Placeat iste, perferendis quam veritatis aspernatur voluptates adipisci eius natus voluptas odio tempora facere, exercitationem, quos rem ullam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum distinctio nihil adipisci quos, aliquid
+                assumenda voluptatem, reiciendis architecto autem magnam, sint modi repudiandae pariatur. Suscipit at
+                ducimus quas error voluptatem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic minus neque tenetur! Placeat iste,
+                perferendis quam veritatis aspernatur voluptates adipisci eius natus voluptas odio tempora facere,
+                exercitationem, quos rem ullam.</p>
             <ul>
                 <li>Eat</li>
                 <li>Sleep</li>
@@ -97,11 +155,19 @@
             </dl>
 
             <figure>
-                <img src="pexels-daria-shevtsova-1030925.jpeg" alt="This is an image file that doesn't exist." width="200" height="200" />
+                <img src="pexels-daria-shevtsova-1030925.jpeg" alt="This is an image file that doesn't exist."
+                    width="200" height="200" />
                 <figcaption id="special">This is an image.</figcaption>
             </figure>
 
-            <table>
+            <!-- Rules for naming IDs and Classes
+            * Don't start with a number
+            * Don't us special characters
+            * Don't us spaces unintentional
+            * Don't capitalize the first letter.
+            -->
+
+            <table id="first-table">
                 <thead>
                     <tr>
                         <td>Column 1</td>
@@ -115,6 +181,7 @@
                     </tr>
                 </tbody>
             </table>
+
             <form>
                 <label for="username">Username</label>
                 <input id="username" type="text" />
@@ -135,4 +202,5 @@
     </footer>
 
 </body>
+
 </html>

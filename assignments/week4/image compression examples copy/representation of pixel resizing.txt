@@ -1,0 +1,14 @@
+ORIGINAL IMAGE
+red  red  red
+blue red  red
+blue red  blue
+
+IMAGE 66% SIZE
+red  red
+purp red
+
+IMAGE 2X SIZE
+red  red  red  red  red  red
+purp purp red  red  red  red
+blue blue red  red  red  red
+blue blue red  red  blue blue

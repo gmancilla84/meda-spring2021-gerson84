@@ -312,6 +312,7 @@ for (var i = 0; i < 10; i++) {
     //    break;
     // }
 
+
    // if (color == "red") {
         // If the program hits this keyword, it will end this specific iteration.
     //    continue;
@@ -327,5 +328,140 @@ for (var i = 0; i < 10; i++) {
 
 
 
+
+
+// .forEach(); A function for arrays that goes through each element of the array and does something.
+
+var someArray = [10, 20, 30, 40, 50]
+
+someArray.forEach(function (arrayValue) {
+    console.log(arrayValue + 100);
+});
+
+
+// Functions 
+
+function myFirstFunction() {
+    console.log("hello from first function!")
+}
+
+
+myFirstFunction();
+myFirstFunction();
+myFirstFunction();
+
+
+// Parameters (fancy name for Variable that belong to a function) and Arguments (fancy name for the value of a parameter.)
+
+// Parameters are written within the parenthesis of the DEFINITION
+
+function addTwoNumbers(firstNumber, secondNumber) {
+    var total = firstNumber + secondNumber;
+
+    console.log(total);
+}
+
+// this variable doesn't exist because it only lives inside the addTwoNumbers function: console.log(firstNumber);
+
+
+// Arguements are written within the parethesis of the CALL.
+
+addTwoNumbers(10, 1);
+addTwoNumbers(100, 5);
+addTwoNumbers(-5, 10);
+
+
+// Returing values from Functions
+
+
+// Concatenation (fancy word for); combining two strings.
+
+function makeExciting(sentence) {
+
+    var excitingSentence = sentence + "!!!";
+
+    console.log(excitingSentence);
+
+    return [sentence, excitingSentence, 1000];
+}
+
+
+
+var savedSentence = makeExciting("How are you doing");
+var savedSentence2 = makeExciting("Would you like ice cream");
+
+console.log("The Value: " + savedSentence);
+
+
+// Example function, Math Summarizer;
+
+function mathSummarizer(num1, num2) {
+
+    var sum = num1 + num2;
+    var difference = num1 - num2;
+    var differenceReversed = num2 - num1;
+    var quotient = num1 / num2;
+    var quotientReversed = num2 / num1;
+    var product = num1 * num2;
+
+    //return [sum, difference, differenceReversed, quotient, quotientReversed, product];
+
+    var object = {
+        "Sum": sum,
+        "Difference": difference,
+        "DifferenceReversed": differenceReversed,
+        "Quotient": quotient,
+        "Quotion Reversed": quotientReversed,
+        "Product": product
+    };
+
+    return object;
+}
+
+
+function mathForMe(num1, num2) {
+
+    var number1 = num1;
+    var number2 = num2;
+    var results = mathSummarizer(number1, number2);
+
+    for (var keyName in results) {
+
+        console.log("The " + keyName + " of " + number1 + " and " + number2 + " is " + results[keyName]);
+
+    }
+
+    console.log(" ");
+}
+
+mathForMe(10, 20); // Each of these calls are  equivalent to ~25 lines of code
+
+mathForMe(50, 100);
+
+mathForMe(54,234);
+
+// var number1 = 50;
+// var number2 = 100;
+// var results = mathSummarizer(number1, number2);
+
+// console.log(results);
+
+//v ar sumSentence = "The sum of 9 and 15 is " + results["Sum"];
+// var sumSentence = "The product of 9 and 15 is" + results["Product"];
+
+// console.log(sumSentence);
+
+//for (var keyName in results) {
+
+//   console.log("The " + keyName + " of " + number1 + " and " + number2 + " is " + results[keyName]);
+
+
+
+
+
+
+// NaN: Not a Number, meaning you multiplied or divided by a value that cannot be multiplied or divided. Example: console.log(mathSummarizer(0, 0));
+
+// Infinity: what is this?
 
 
